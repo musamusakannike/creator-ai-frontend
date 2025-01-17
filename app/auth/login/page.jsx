@@ -42,7 +42,7 @@ const LoginPage = () => {
 
         {/* Info Section */}
         <p className="text-sm text-gray-500 text-center mt-4">
-          Don’t have an account?{" "}
+          Don&apos;t have an account?{" "}
           <a href="/signup" className="text-indigo-500 hover:underline">
             Sign up
           </a>

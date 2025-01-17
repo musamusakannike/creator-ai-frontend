@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const SignupPage = () => {
@@ -44,13 +45,13 @@ const SignupPage = () => {
         {/* Info Section */}
         <p className="text-sm text-gray-500 text-center mt-4">
           By signing up, you agree to our{" "}
-          <a href="#" className="text-indigo-500 hover:underline">
+          <Link href="#" className="text-indigo-500 hover:underline">
             Terms of Service
-          </a>{" "}
+          </Link>{" "}
           and{" "}
-          <a href="#" className="text-indigo-500 hover:underline">
+          <Link href="#" className="text-indigo-500 hover:underline">
             Privacy Policy
-          </a>.
+          </Link>.
         </p>
       </div>
     </div>

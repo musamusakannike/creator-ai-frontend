@@ -1,5 +1,6 @@
 import HeroImage from "@/assets/images/hero.png"
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -15,12 +16,12 @@ const HeroSection = () => {
             Manage, analyze, create, and grow your YouTube presence with our all-in-one AI assistant for content creators.
           </p>
           <div className="space-y-4 sm:space-x-4 sm:space-y-0 flex flex-col sm:flex-row">
-            <button className="px-6 py-3 text-white bg-indigo-600 rounded-md hover:bg-indigo-700">
+            <Link href={"/auth/signup"} className="px-6 py-3 text-white bg-indigo-600 rounded-md hover:bg-indigo-700">
               Get Started
-            </button>
-            <button className="px-6 py-3 text-indigo-600 border border-indigo-600 rounded-md hover:bg-indigo-50">
+            </Link>
+            <Link href={""} className="px-6 py-3 text-indigo-600 border border-indigo-600 rounded-md hover:bg-indigo-50">
               Watch Demo
-            </button>
+            </Link>
           </div>
           <p className="text-sm text-gray-500 mt-2">
             Trusted by <strong>15k+</strong> users worldwide

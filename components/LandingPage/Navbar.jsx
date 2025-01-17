@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -10,43 +11,43 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold text-gray-800">
+            <Link href="/" className="text-2xl font-bold text-gray-800">
               Creator AI
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
-            <a
+            <Link
               href="#dashboard"
               className="text-gray-600 hover:text-indigo-600"
             >
               Dashboard
-            </a>
-            <a
+            </Link>
+            <Link
               href="#analytics"
               className="text-gray-600 hover:text-indigo-600"
             >
               Analytics
-            </a>
-            <a
+            </Link>
+            <Link
               href="#video-editor"
               className="text-gray-600 hover:text-indigo-600"
             >
               Video Editor
-            </a>
-            <a
+            </Link>
+            <Link
               href="#idea-generator"
               className="text-gray-600 hover:text-indigo-600"
             >
               Idea Generator
-            </a>
-            <a
+            </Link>
+            <Link
               href="#ai-assistant"
               className="text-gray-600 hover:text-indigo-600"
             >
               AI Assistant
-            </a>
+            </Link>
           </div>
 
           {/* Buttons */}
@@ -97,47 +98,47 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden">
           <div className="space-y-1 px-2 pt-2 pb-3 sm:px-3">
-            <a
+            <Link
               href="#dashboard"
               className="block px-3 py-2 text-gray-600 rounded hover:bg-gray-100 hover:text-indigo-600"
             >
               Dashboard
-            </a>
-            <a
+            </Link>
+            <Link
               href="#analytics"
               className="block px-3 py-2 text-gray-600 rounded hover:bg-gray-100 hover:text-indigo-600"
             >
               Analytics
-            </a>
-            <a
+            </Link>
+            <Link
               href="#video-editor"
               className="block px-3 py-2 text-gray-600 rounded hover:bg-gray-100 hover:text-indigo-600"
             >
               Video Editor
-            </a>
-            <a
+            </Link>
+            <Link
               href="#idea-generator"
               className="block px-3 py-2 text-gray-600 rounded hover:bg-gray-100 hover:text-indigo-600"
             >
               Idea Generator
-            </a>
-            <a
+            </Link>
+            <Link
               href="#ai-assistant"
               className="block px-3 py-2 text-gray-600 rounded hover:bg-gray-100 hover:text-indigo-600"
             >
               AI Assistant
-            </a>
+            </Link>
           </div>
           <div className="border-t border-gray-200 pt-4 pb-3">
             <div className="flex items-center px-5">
-              <button className="w-full px-4 py-2 text-indigo-600 border border-indigo-600 rounded hover:bg-indigo-50">
+              <Link href={"/auth/login"} className="w-full px-4 py-2 text-indigo-600 border border-indigo-600 rounded hover:bg-indigo-50">
                 Login
-              </button>
+              </Link>
             </div>
             <div className="mt-3 px-5">
-              <button className="w-full px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
+              <Link href={"/auth/signup"} className="w-full px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
                 Get Started
-              </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
-import React from 'react';
-import { FaChartBar, FaEdit, FaLightbulb, FaRobot } from 'react-icons/fa';
+import React from "react";
+import { FaChartBar, FaEdit, FaLightbulb, FaRobot } from "react-icons/fa";
 
 const FeaturesSection = () => {
   return (
@@ -10,7 +10,8 @@ const FeaturesSection = () => {
           Powerful Features for Content Creators
         </h2>
         <p className="mt-4 text-gray-600 text-lg">
-          Manage, analyze, and grow your YouTube channel with cutting-edge AI tools tailored for creators.
+          Manage, analyze, and grow your YouTube channel with cutting-edge AI
+          tools tailored for creators.
         </p>
 
         {/* Features Grid */}
@@ -20,9 +21,12 @@ const FeaturesSection = () => {
             <div className="flex justify-center items-center text-indigo-600 text-4xl">
               <FaChartBar />
             </div>
-            <h3 className="mt-4 text-xl font-semibold text-gray-900">Advanced Analytics</h3>
+            <h3 className="mt-4 text-xl font-semibold text-gray-900">
+              Advanced Analytics
+            </h3>
             <p className="mt-2 text-gray-600">
-              Gain actionable insights into your channel's performance, audience engagement, and growth trends.
+              Gain actionable insights into your channel&apos;s performance,
+              audience engagement, and growth trends.
             </p>
           </div>
 
@@ -31,9 +35,12 @@ const FeaturesSection = () => {
             <div className="flex justify-center items-center text-indigo-600 text-4xl">
               <FaEdit />
             </div>
-            <h3 className="mt-4 text-xl font-semibold text-gray-900">AI Video Editor</h3>
+            <h3 className="mt-4 text-xl font-semibold text-gray-900">
+              AI Video Editor
+            </h3>
             <p className="mt-2 text-gray-600">
-              Edit videos effortlessly with AI-powered tools that enhance visuals, audio, and pacing.
+              Edit videos effortlessly with AI-powered tools that enhance
+              visuals, audio, and pacing.
             </p>
           </div>
 
@@ -42,9 +49,12 @@ const FeaturesSection = () => {
             <div className="flex justify-center items-center text-indigo-600 text-4xl">
               <FaLightbulb />
             </div>
-            <h3 className="mt-4 text-xl font-semibold text-gray-900">Idea Generator</h3>
+            <h3 className="mt-4 text-xl font-semibold text-gray-900">
+              Idea Generator
+            </h3>
             <p className="mt-2 text-gray-600">
-              Never run out of content ideas with our AI-driven topic and trend suggestion engine.
+              Never run out of content ideas with our AI-driven topic and trend
+              suggestion engine.
             </p>
           </div>
 
@@ -53,9 +63,12 @@ const FeaturesSection = () => {
             <div className="flex justify-center items-center text-indigo-600 text-4xl">
               <FaRobot />
             </div>
-            <h3 className="mt-4 text-xl font-semibold text-gray-900">AI Assistant</h3>
+            <h3 className="mt-4 text-xl font-semibold text-gray-900">
+              AI Assistant
+            </h3>
             <p className="mt-2 text-gray-600">
-              Automate repetitive tasks, get personalized advice, and manage your workflow efficiently with AI.
+              Automate repetitive tasks, get personalized advice, and manage
+              your workflow efficiently with AI.
             </p>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const LoginPage = () => {
@@ -43,9 +44,9 @@ const LoginPage = () => {
         {/* Info Section */}
         <p className="text-sm text-gray-500 text-center mt-4">
           Don&apos;t have an account?{" "}
-          <a href="/signup" className="text-indigo-500 hover:underline">
+          <Link href="/auth/signup" className="text-indigo-500 hover:underline">
             Sign up
-          </a>
+          </Link>
         </p>
       </div>
     </div>

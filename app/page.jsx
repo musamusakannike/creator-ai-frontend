@@ -1,6 +1,8 @@
-import FeaturesSection from '@/components/LandingPage/FeaturesSection';
-import HeroSection from '@/components/LandingPage/HeroSection';
-import Navbar from '@/components/LandingPage/Navbar';
+import FeaturesSection from "@/components/LandingPage/FeaturesSection";
+import Footer from "@/components/LandingPage/FooterSection";
+import HeroSection from "@/components/LandingPage/HeroSection";
+import Navbar from "@/components/LandingPage/Navbar";
+import PricingSection from "@/components/LandingPage/PricingSection";
 
 const Home = () => {
   return (
@@ -8,8 +10,10 @@ const Home = () => {
       <Navbar />
       <HeroSection />
       <FeaturesSection />
+      <PricingSection />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
 export default Home;

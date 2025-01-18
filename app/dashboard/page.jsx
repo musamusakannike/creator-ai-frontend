@@ -43,15 +43,15 @@ const Dashboard = () => {
   }, []);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <p className="text-center text-indigo-600">Loading...</p>;
   }
 
   if (error) {
-    return <p className="text-red-500">{error}</p>;
+    return <p className="text-center text-red-500">{error}</p>;
   }
 
   if (!stats) {
-    return <p>No statistics available.</p>;
+    return <p className="text-center text-gray-600">No statistics available.</p>;
   }
 
   const {
@@ -65,51 +65,61 @@ const Dashboard = () => {
   } = stats;
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <div className="bg-white shadow-lg rounded-lg p-8">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 p-8 text-gray-900 dark:text-gray-100">
+      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8">
         {/* Channel Details */}
         <div className="flex items-center">
           <img
             src={channelLogo}
             alt={channelName}
-            className="w-16 h-16 rounded-full mr-4"
+            className="w-16 h-16 rounded-full mr-4 border border-indigo-500"
           />
           <div>
-            <h1 className="text-2xl font-bold">{channelName}</h1>
-            <p>{subscribers} subscribers</p>
+            <h1 className="text-3xl font-extrabold text-indigo-600 dark:text-indigo-400">
+              {channelName}
+            </h1>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              {subscribers} subscribers
+            </p>
           </div>
         </div>
 
         {/* Analytics Summary */}
         <div className="mt-8 grid grid-cols-2 gap-4">
-          <div className="bg-gray-100 p-4 rounded-lg text-center">
-            <h2 className="text-lg font-bold">Total Views</h2>
-            <p>{totalViews}</p>
+          <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg text-center shadow-sm">
+            <h2 className="text-lg font-bold text-indigo-600 dark:text-indigo-400">
+              Total Views
+            </h2>
+            <p className="text-2xl font-extrabold">{totalViews}</p>
           </div>
-          <div className="bg-gray-100 p-4 rounded-lg text-center">
-            <h2 className="text-lg font-bold">Total Watch Time</h2>
-            <p>{totalWatchTime} minutes</p>
+          <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg text-center shadow-sm">
+            <h2 className="text-lg font-bold text-indigo-600 dark:text-indigo-400">
+              Total Watch Time
+            </h2>
+            <p className="text-2xl font-extrabold">{totalWatchTime} minutes</p>
           </div>
         </div>
 
         {/* Latest Videos */}
         <div className="mt-8">
-          <h2 className="text-xl font-bold">Latest Videos</h2>
+          <h2 className="text-xl font-bold text-indigo-600 dark:text-indigo-400">Latest Videos</h2>
           <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {latestVideos.map((video, index) => (
               <div
                 key={index}
-                className="bg-gray-100 p-4 rounded-lg shadow-sm"
+                className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow"
               >
                 <img
                   src={video.thumbnail}
                   alt={video.title}
                   className="w-full rounded-lg"
                 />
-                <h3 className="mt-2 font-bold">{video.title}</h3>
-                <p>Views: {video.views}</p>
-                <p>Likes: {video.likes}</p>
-                <p>Comments: {video.comments}</p>
+                <h3 className="mt-2 font-bold text-indigo-600 dark:text-indigo-400">
+                  {video.title}
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Views: {video.views}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Likes: {video.likes}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Comments: {video.comments}</p>
               </div>
             ))}
           </div>
@@ -117,13 +127,18 @@ const Dashboard = () => {
 
         {/* Latest Comments */}
         <div className="mt-8">
-          <h2 className="text-xl font-bold">Latest Comments</h2>
+          <h2 className="text-xl font-bold text-indigo-600 dark:text-indigo-400">Latest Comments</h2>
           <ul className="mt-4 space-y-4">
             {latestComments.map((comment, index) => (
-              <li key={index} className="bg-gray-100 p-4 rounded-lg shadow-sm">
-                <p className="font-bold">{comment.author}</p>
-                <p>{comment.text}</p>
-                <p className="text-sm text-gray-500">
+              <li
+                key={index}
+                className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+              >
+                <p className="font-bold text-indigo-600 dark:text-indigo-400">
+                  {comment.author}
+                </p>
+                <p className="text-gray-600 dark:text-gray-300">{comment.text}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
                   {new Date(comment.publishedAt).toLocaleString()}
                 </p>
               </li>

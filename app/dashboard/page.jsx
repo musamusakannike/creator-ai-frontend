@@ -91,12 +91,14 @@ const Dashboard = () => {
               Total Views
             </h2>
             <p className="text-2xl font-extrabold">{totalViews}</p>
+            <p className="text-sm text-gray-500 mt-2">Last 28 days</p>
           </div>
           <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg text-center shadow-sm">
             <h2 className="text-lg font-bold text-indigo-600 dark:text-indigo-400">
               Total Watch Time
             </h2>
             <p className="text-2xl font-extrabold">{totalWatchTime} minutes</p>
+            <p className="text-sm text-gray-500 mt-2">Last 28 days</p>
           </div>
         </div>
 
